@@ -1,0 +1,41 @@
+Modular arithmetic:
+
+1. Working with the following set of Integers S = {0,1,2,3,4,5,6}
+p = 7 since we have 7 elements in the given set
+What is:
+a) 4 + 4 = 8 mod 7 = 1
+b) 3 x 5 = 15 mod 7 = 1
+c) what is the inverse of 3: 
+I'll apply the Fermat's little theorem:
+a^-1 = a^(p-2) (mop p) = 3^(7-2) (mod 7) = 3^5 mod 7 = 243 mod 7 = 5
+
+
+2. For S = {0,1,2,3,4,5,6}
+Can we consider 'S' and the operation '+' to be a group ?
+
+• Closure: (a + b) mod p exists in the set
+
+• Associativity: Addition of integers is associative, hence (a + b) + c = a + (b + c) in any case.
+
+• Identity Element: For addition of integers, the identity element is 0 and it exists in our set.
+
+• Inverse Element: For addition of integers, the inverse element is a "b" such that a + b = b + a = e (e = 0 - identity element). Hence, a + b = 0. 
+For example, 4 + b = 0 | -4 => b = -4. 4 + (-4) = 0 - works
+-4 mod 7 = 3 => 3 exists in the S 
+
+Then S under the addition is the group.
+
+
+3. What is
+-13 mod 5
+|-13| = 13; 13 mod 5 = 2; (quotient without the remainder)
+2 * 5 = 10;
+- 13 + 10 = -3; (remainder)
+-3 mod 5 = 2;
+
+
+4. Polynomials
+For the polynomial x^3 − x^2 + 4x − 12
+
+Find a positive root ? the solution is 2 , but I couldn't solve that on my own (thx to ChatGPT).
+What is the degree of this polynomial = 3 (the highest degree of the polynomial - x^3)

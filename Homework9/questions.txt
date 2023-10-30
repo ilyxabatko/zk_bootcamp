@@ -1,0 +1,17 @@
+Questions about the previous homework (Sudoku zkApp example):
+
+Q: Does sudoku.ts solve the puzzle ?
+A: I don't think so, "sudoku-lib.js" solves sudoku when we call it, and then "sudoku.ts" defines the zkApp functionality does some checks to be sure that passed instances and the solution are correct.
+
+Q: Which lines in sudoku.ts indicate that a solution is
+correct?
+A: I think that the last line inside the "submitSolution" method indicates that the solution is correct (this.isSolved.set(Bool(true));) after all the necessary checks are done.
+
+Q: Is it possible to submit a correct solution, but have the
+proof rejected as false?
+A: I don't think it's possible to submit a correct solution and get the proof rejected accorrding to the app implementation. However there might be a bug that I didn't find which can cause the proof to be rejected.
+Maybe, the proof can be rejected in case we pass the wrong public input - initial Sudoku (sudokuInstance) on the following line "zkApp.submitSolution(Sudoku.from(sudoku), Sudoku.from(noSolution));".
+
+Q: If the prover altered the code, could they cheat and
+claim they had a solution, when in fact they didn't?
+A: In case there're no vulnerabilities in the setup and code, it shouldn't be possible to alter the code and pretened like you have the solution. Otherwise, there're could be some attack vectors to be able to cheat.
